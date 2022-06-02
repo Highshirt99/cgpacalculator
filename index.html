@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>CGPA Calculator</title>
+</head>
+<body style = "background-color: aliceblue;">
+
+    <div class="alertbox">
+    
+    
+        <p  class  = "alert alert-info text-center"  role="alert"> How many courses did you offer? </p>
+
+        <div class="box">
+<input id="num" style = "width: 80px; " type="number"  min ="0" required>
+               
+   <button class = "btn btn-success "  onclick="displayCon()"> Submit </button>
+
+  
+
+    </div>
+
+    
+</div>
+
+<div class  = "note"  style =   " color: rgb(32, 129, 226);  display: none;">
+      
+    <p  style="margin-left: 45px;"><strong>NOTE :</strong> </p> 
+    <ul style="list-style-type: none; font-family: 'Times New Roman', Times, serif;">
+    <li>  This CGPA calculation is based of 5.0 scale. </li> 
+    <li>  A is equivalent to 5 points.</li> 
+    <li>  B is equivalent to 4 points.</li> 
+    <li>  C is equivalent to 3 points.</li> 
+    <li>  D is equivalent to 2 points.</li> 
+    <li>  E is equivalent to 1 point.</li>
+    <li>  F is equivalent to 0 point.</li>
+</ul>
+    <p  style="margin-left: 50px;"><strong>Best of luck!</strong> </p>
+    
+</div>
+
+    <div id="container" id="details">
+
+<form action="" >
+
+
+    <div  >
+        
+        <span > Course  </span>
+        
+        <span >  Score  </span>
+        
+        <span>   Unit </span>
+    
+    </div>
+
+
+    <div id="inpClone"></div>
+
+
+
+<div id = "inpbox">
+
+   
+<input  id ="course" class="input-con" type="text" placeholder="">
+
+<input  class = "input-con  score" type = "number" placeholder="" min ="0" max="100" required>
+
+
+<input   class="input-con unit" type="number" placeholder="" min ="0" required >
+
+<span class = "grd" >Grade</span>
+
+<span class = "pt">Point</span>
+
+</div>
+
+</form>
+
+<br><br>
+
+<h5 id="tnu">Total Unit</h5>
+
+<p id="tp" >Total Point</p>
+
+<br><br>
+
+<div class="btns">
+
+    <div class="btn1">
+<button class=" btnss btn btn-success" id="calcbtn" onclick="calcCGPA()">Calculate</button>
+
+<h5 style="margin-left: 20px ; font-weight: bolder;" id="res1"></h5>
+<p id="message" style="margin-left: 16px;"></p>
+</div>
+<br><br>
+
+<div class="btn3">
+<button class="btnss btn btn-primary" id="loadbtn"  onclick="loadPrev()">Load Previous</button>
+
+<h5 style="margin-left: 28px ; font-weight: bolder;"id="res2"></h5>
+<p id="message2" style="margin-left: 18px;"></p>
+
+</div>
+
+<br><br>
+<div class="btn3">
+<button class="btnss btn btn-warning" id="reloadbtn" onclick="goHome()">Home</button>
+
+</div>
+
+</div>
+
+    </div>
+</body>
+</html>
